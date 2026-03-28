@@ -1,40 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Media Production Company. Fill out our contact form to inquire about 
+                                      video production, audio recording, and multimedia services.">
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <header class="top">
         <h1>Contact Us</h1>
-        <div class="nav">
+        <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
+        </nav>
+    </header>
     
-    <div>
+    <section class="formDetails">
         <h2>Get In Touch</h2>
-        
-        <!-- Form with multiple errors -->
         <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <textarea placeholder="Message"></textarea>
+             <fieldset>
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" name="name" required minlength="2" maxlength="50" placeholder="Your full name">
+                </div>
+
+                 <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Phone">Phone</label>
+                    <input type="tel" id="Phone" name="phone" pattern="[0-9]{10}" required placeholder="0123456789">
+                </div>
+            </fieldset>
             
-            <!-- Missing: labels, proper input types (email, tel), validation attributes -->
-            <!-- Missing: radio buttons, checkboxes, select/dropdown, date/number inputs -->
-            <!-- Missing: fieldset for grouping -->
+            <fieldset>
+                <div class="form-group">
+                    <label for="Appointment">Preferred Date</label>
+                    <input type="date" id="Appointment" name="appointment" required>
+                </div>
+                <div class="form-group">
+                    <label for="Participants">Number of Participants</label>
+                    <input type="number" id="Participants" name="participants" value="1" min="1" max="50" required>
+                </div>
+            </fieldset>
             
-            <button>Submit</button>
+            <fieldset class="options-row">
+                 <div class="form-group">
+                     <label for="service">Service Interested In</label>
+                     <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="video">Video Production</option>
+                        <option value="audio">Audio Recording</option>
+                        <option value="multimedia">Multimedia Solutions</option>
+                    </select>
+                </div>
+                <p>How did you hear about us?</p>
+                <div class="inline-group">
+                    <input type="radio" id="social" name="referral" value="social" required>
+                    <label for="social">Social Media</label>
+                </div>
+                
+                <div class="inline-group">
+                    <input type="radio" id="friend" name="referral" value="friend">
+                    <label for="friend">Friend/Colleague</label>
+                </div>
+                
+                <div class="inline-group">
+                    <input type="radio" id="web" name="referral" value="web">
+                    <label for="web">Web Search</label>
+                </div>
+                
+                <p>Services you are interested in:</p>
+                <div class="inline-group">
+                    <input type="checkbox" id="check1" name="interests" value="video">
+                    <label for="check1">Video Production</label>
+                </div>
+                
+                <div class="inline-group">
+                    <input type="checkbox" id="check2" name="interests" value="audio">
+                    <label for="check2">Audio Recording</label>
+                </div>
+                
+                <div class="inline-group">
+                    <input type="checkbox" id="check3" name="interests" value="multimedia">
+                    <label for="check3">Multimedia Solutions</label>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+                </div>
+            </fieldset>
+            
+            <button type="submit">Submit</button>
         </form>
-    </div>
+    </section>
     
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+    <footer class="bottom">
+        <div class="container">
+            <p>Email: <a href="mailto:contact@mediaproduction.com">contact@mediaproduction.com</a></p>
+            <p>Phone: <a href="tel:5550123">555-0123</a></p>
+            <p>&copy; 2026 Media Production Company. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
