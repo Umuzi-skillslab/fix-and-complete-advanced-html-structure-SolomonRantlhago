@@ -56,6 +56,7 @@ body {
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-shadow: 4px 4px 12px rgba(238, 181, 134, 0.9);
 }
 
 .hero p {
