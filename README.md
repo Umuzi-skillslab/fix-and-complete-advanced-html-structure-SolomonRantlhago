@@ -85,18 +85,12 @@ Screenshots and demo videos are located in the `screenshots/` folder, including:
 - Video, audio, and iframe elements functioning
 - Flexbox and CSS Grid layout demonstrations
 
-## Code Quality & Linting
-- The CSS stylesheet is organised into clearly labelled sections with 
-  comments separating styles for each page (index.html, about.html, 
-  contact.html, media.html, and generic/shared styles).
-- Consistent naming conventions are used throughout, with class names 
-  reflecting their purpose (e.g. `.form-group`, `.offering-grid`, 
-  `.testimonial-grid`).
+## Code Quality & Standards
+- The CSS stylesheet is organised into clearly labelled sections with comments separating styles for each page (index.html, about.html, contact.html, media.html, and generic/shared styles).
+- Consistent naming conventions are used throughout, with class names reflecting their purpose (e.g. `.form-group`, `offering-grid`, `.testimonial-grid`).
 - No duplicate or redundant CSS rules remain in the final stylesheet.
-- All HTML files follow consistent indentation and structure, with 
-  semantic elements used in place of generic `<div>` containers.
-- W3C validation was used as a quality gate — all four HTML pages and 
-  the CSS file passed with zero errors before submission.
+- All HTML files follow consistent indentation and structure, with semantic elements used in place of generic `<div>` containers.
+- W3C validation was used as a quality gate - all four HTML pages and the CSS file passed with zero errors before submission.
 
 ## Known Issues and Limitations
 - The image carousel in about.html is CSS-only and does not include manual navigation controls, meaning users cannot skip to a specific slide.
@@ -107,7 +101,7 @@ The main challenges faced during development included:
 
 - Structuring the CSS file cleanly across four pages without duplication required careful planning and section comments to keep related rules grouped.
 - Implementing the 3D `rotateX` effect on service cards required understanding `perspective`, `transform-style: preserve-3d`, and `transform-origin` together, as the effect did not work correctly until all three were applied on the right elements.
-- The Google Maps iframe sandbox issue was unexpected — it appeared to add security but the W3C validator flagged it as counterproductive. Researching the issue led to a better understanding of how sandbox attributes interact.
+- The Google Maps iframe sandbox issue was unexpected - it appeared to add security but the W3C validator flagged it as counterproductive. Researching the issue led to a better understanding of how sandbox attributes interact.
 - Balancing the `@media (prefers-reduced-motion)` rule with existing animations required understanding how `!important` overrides work in CSS
 
 ## Viewing Locally
