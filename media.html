@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our media gallery with video, audio, and multimedia samples."/>
+    <meta name="description" content="Explore our media gallery with video, audio, and multimedia samples.">
     <title>Media Gallery</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:,">
 </head>
 <body>
     <header class="top">
@@ -22,17 +23,29 @@
         <section class="video-showcase">
             <h2>Video Showcase</h2>
             <div class="video-grid">
-                <video controls loop>
+                <video controls loop poster="images/video1.jpg">
                     <source src="media/Photograpy.mp4" type="video/mp4">
                     <source src="media/sample1.webm" type="video/webm">
                     <source src="media/sample1.ogg" type="video/ogg">
+
+                    <track kind="captions"
+                           src="media/captions1.vtt"
+                           srclang="en"
+                           label="English captions"
+                           default>
                     Your browser does not support the video tag.
                 </video>
                 
-                <video controls loop>
+                <video controls loop poster="images/video2.jpg">
                     <source src="media/Creative-design.mp4" type="video/mp4">
                     <source src="media/sample2.webm" type="video/webm">
                     <source src="media/sample2.ogg" type="video/ogg">
+
+                    <track kind="captions"
+                           src="media/captions2.vtt"
+                           srclang="en"
+                           label="English captions"
+                           default>
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -56,7 +69,8 @@
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7170.909092028745!2d27.929384990140388!3d-26.018679558764937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95763a6fd170a9%3A0x22e42dfd8ce83c9c!2sCosmo%20Mall!5e0!3m2!1sen!2sza!4v1774378928275!5m2!1sen!2sza"
                  style="border:0;"
                  referrerpolicy="no-referrer-when-downgrade"
-                 sandbox="allow-scripts allow-same-origin">
+                 loading="lazy"
+                 title="Google Maps location of studio">
             </iframe>
             <p>Visit our studio at Cosmo City Mall, Media Shop.</p>
         </section>
@@ -66,7 +80,10 @@
             <h2>Client Testimonials</h2>
             <div class="testimonial-grid">
                 <figure>
-                    <img src="images/client1.jpg" alt="Client 1">
+                    <picture>
+                        <source srcset="images/client1.webp" type="image/webp">
+                        <img src="images/client1.jpg" alt="Client 1" loading="lazy">
+                    </picture>
                     <figcaption>
                         “The team delivered exceptional video quality and captured our vision perfectly. Highly recommended!”<br>
                         <strong>— John Doe</strong>
@@ -74,14 +91,20 @@
                 </figure>
                 
                 <figure>
-                    <img src="images/client2.jpg" alt="Client 2">
+                    <picture>
+                        <source srcset="images/client2.webp" type="image/webp">
+                        <img src="images/client2.jpg" alt="Client 2" loading="lazy">
+                    </picture>
                     <figcaption>
                         “Professional, creative, and easy to work with. The audio production exceeded our expectations.”<br>
                         <strong>— Jane Smith</strong>
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="images/client3.jpg" alt="Client 3">
+                    <picture>
+                        <source srcset="images/client3.webp" type="image/webp">
+                        <img src="images/client3.jpg" alt="Client 3" loading="lazy">
+                    </picture>
                     <figcaption>
                         “From start to finish, the experience was seamless. Great attention to detail and fast delivery.”<br>
                         <strong>— Mike Johnson</strong>
